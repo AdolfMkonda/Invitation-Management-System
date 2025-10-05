@@ -10,7 +10,6 @@ A web-based application to manage event invitations efficiently.
 
 ## Technologies Used
 
-- 
 - Backend: Django
 
 ## Getting Started
