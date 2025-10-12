@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from invitation_management.invitations.models import Invitation
+from .models import Invitation
 from django.contrib.auth.models import User
 
 class UserSerializer(serializers.ModelSerializer):
