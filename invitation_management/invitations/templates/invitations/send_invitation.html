@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Send Invitation</title>
+</head>
+<body>
+  <h1>Send Invitation Email</h1>
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Send Invitation</button>
+  </form>
+</body>
+</html>
