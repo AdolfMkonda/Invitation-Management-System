@@ -16,3 +16,18 @@ class InvitationViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         serializer.save(sender=self.request.user)
 
+class InvitationListView(viewsets.ReadOnlyModelViewSet):
+    queryset = Invitation.objects.all()
+    serializer_class = InvitationSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        return self.queryset.filter(recipient=self.request.user)
+    
+class InvitationDetailView(viewsets.ReadOnlyModelViewSet):
+    queryset = Invitation.objects.all()
+    serializer_class = InvitationSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        return self.queryset.filter(id=self.kwargs['pk'], recipient=self.request.user)
