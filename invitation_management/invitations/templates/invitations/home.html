@@ -1,0 +1,14 @@
+{% extends 'invitations/base.html' %}
+{% block title %}Home - Invitation Management{% endblock %}
+{% block content %}
+    <div class="text-center">
+        <h1>Welcome to Invitation Management</h1>
+        <p>Create and manage invitations with ease.</p>
+        {% if user.is_authenticated %}
+            <a href="{% url 'send_invitation' %}" class="btn btn-primary">Send an Invitation</a>
+            <a href="{% url 'invitation-list' %}" class="btn btn-secondary">View Your Invitations</a>
+        {% else %}
+            <p>Please <a href="{% url 'login' %}">log in</a> or <a href="{% url 'signup' %}">sign up</a> to get started.</p>
+        {% endif %}
+    </div>
+{% endblock %}

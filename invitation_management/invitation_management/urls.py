@@ -24,5 +24,5 @@ from invitations.views import send_invitation
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('invitations.urls')),
-    path('', send_invitation, name='home'),
+ #   path('', send_invitation, name='home'),
 ]
