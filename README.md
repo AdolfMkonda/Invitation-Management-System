@@ -16,7 +16,7 @@ A web-based application to manage event invitations efficiently.
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/Invitation-Management-System.git
+    git clone git@github.com:AdolfMkonda/Invitation-Management-System.git
     ```
 2. Install dependencies:
     ```bash
